@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SynGem Bot – Privacy Policy / Политика конфиденциальности / Құпиялылық саясаты</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card-bg: #111628;
+      --accent: #5c8dff;
+      --accent-soft: #8c6cff;
+      --text-main: #f5f7ff;
+      --text-muted: #a3acc7;
+      --border-subtle: #232841;
+      --radius-lg: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #192345 0, #050814 55%, #02030a 100%);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrap {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
+      border-radius: 28px;
+      padding: 28px 22px 26px;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow:
+        0 22px 60px rgba(0,0,0,0.65),
+        0 0 0 1px rgba(7,12,40,0.8);
+      backdrop-filter: blur(16px);
+    }
+
+    @media (min-width: 720px) {
+      .card {
+        padding: 32px 32px 30px;
+      }
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .logo-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 25% 20%, #5c8dff, #8c6cff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 0 18px rgba(92,141,255,0.75),
+        0 0 28px rgba(140,108,255,0.7);
+      flex-shrink: 0;
+    }
+
+    .logo-circle span {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.04em;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 650;
+    }
+
+    .title-block p {
+      margin: 3px 0 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      background: rgba(4,7,24,0.9);
+      border-radius: 999px;
+      padding: 4px;
+      border: 1px solid var(--border-subtle);
+      margin: 6px 0 10px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.16s ease-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .lang-btn span.flag {
+      font-size: 14px;
+    }
+
+    .lang-btn.active {
+      background: radial-gradient(circle at 0 0, rgba(92,141,255,0.6), rgba(140,108,255,0.85));
+      color: #ffffff;
+      box-shadow: 0 0 18px rgba(92,141,255,0.5);
+    }
+
+    .lang-btn:not(.active):hover {
+      background: rgba(255,255,255,0.03);
+      color: #d3dbff;
+    }
+
+    .pill-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: rgba(10,16,45,0.9);
+      border-radius: 999px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255,255,255,0.04);
+      margin-bottom: 12px;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #66ffb8, #0bbf7a);
+      box-shadow: 0 0 10px rgba(102,255,184,0.8);
+    }
+
+    .content {
+      margin-top: 10px;
+      max-height: 70vh;
+      overflow: auto;
+      padding-right: 6px;
+    }
+
+    .content::-webkit-scrollbar {
+      width: 6px;
+    }
+    .content::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .content::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15);
+      border-radius: 999px;
+    }
+
+    .lang-block {
+      display: none;
+      font-size: 14px;
+    }
+
+    .lang-block.active {
+      display: block;
+    }
+
+    h2 {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    h3 {
+      margin-top: 14px;
+      margin-bottom: 6px;
+      font-size: 15px;
+      font-weight: 550;
+    }
+
+    p {
+      margin: 4px 0 10px;
+      color: var(--text-main);
+    }
+
+    ul {
+      margin: 4px 0 10px 18px;
+      padding: 0;
+      color: var(--text-main);
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .date {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <div class="logo-circle"><span>SG</span></div>
+        <div class="title-block">
+          <h1>SynGem Bot – Privacy Policy</h1>
+          <p>Multilingual privacy policy for the SynGem AI Telegram bot.</p>
+        </div>
+      </div>
+
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">
+          <span class="flag">🇬🇧</span> English
+        </button>
+        <button class="lang-btn" data-lang="ru">
+          <span class="flag">🇷🇺</span> Русский
+        </button>
+        <button class="lang-btn" data-lang="kk">
+          <span class="flag">🇰🇿</span> Қазақша
+        </button>
+      </div>
+
+      <div class="pill-note">
+        <span class="pill-dot"></span>
+        <span>Default language: English · Язык по умолчанию – английский · Әдепкі тіл – ағылшын</span>
+      </div>
+
+      <div class="content">
+        <!-- English -->
+        <div id="lang-en" class="lang-block active">
+          <div class="date">Effective date: 2026-03-01</div>
+
+          <h2>Privacy Policy for SynGem Bot</h2>
+
+          <h3>1. General</h3>
+          <p>SynGem Bot is a Telegram bot that uses AI technologies (including large language models) to generate responses. By using this bot, you agree to this Privacy Policy.</p>
+
+          <h3>2. Data We Process</h3>
+          <p>We may process the following data when you interact with the bot:</p>
+          <ul>
+            <li>Your Telegram user ID</li>
+            <li>Your username (if available)</li>
+            <li>Messages you send to the bot</li>
+            <li>Technical data required for the bot to operate correctly</li>
+          </ul>
+          <p>We do not intentionally collect sensitive personal information, except what you voluntarily share in your messages.</p>
+
+          <h3>3. Purpose of Processing</h3>
+          <p>We use the data in order to:</p>
+          <ul>
+            <li>Generate AI-based replies</li>
+            <li>Maintain and improve the bot’s functionality</li>
+            <li>Prevent abuse and ensure security</li>
+          </ul>
+          <p>We do not sell or rent your data to third parties.</p>
+
+          <h3>4. Third-Party Services</h3>
+          <p>To generate responses, your messages may be temporarily processed by third-party AI services (such as language model providers). Data is transmitted only for the purpose of generating a reply.</p>
+
+          <h3>5. Data Storage</h3>
+          <p>Messages may be stored temporarily for technical reasons such as caching, debugging or service improvement. We do not intentionally keep a permanent history of private conversations, unless it is required for security, abuse prevention or diagnostics.</p>
+
+          <h3>6. Security</h3>
+          <p>We take reasonable measures to protect data from unauthorized access, alteration or disclosure.</p>
+
+          <h3>7. Your Rights</h3>
+          <p>You may stop using the bot at any time by leaving or blocking the chat. For questions about data processing or removal requests, please contact the bot administrator via Telegram.</p>
+
+          <h3>8. Changes to This Policy</h3>
+          <p>We may update this Privacy Policy from time to time. Continued use of the bot after such changes means that you accept the updated version.</p>
+        </div>
+
+        <!-- Russian -->
+        <div id="lang-ru" class="lang-block">
+          <div class="date">Дата вступления в силу: 2026-03-01</div>
+
+          <h2>Политика конфиденциальности SynGem Bot</h2>
+
+          <h3>1. Общие положения</h3>
+          <p>SynGem Bot — это Telegram-бот, использующий технологии искусственного интеллекта (в том числе большие языковые модели) для генерации ответов. Используя бота, вы соглашаетесь с настоящей Политикой конфиденциальности.</p>
+
+          <h3>2. Какие данные могут обрабатываться</h3>
+          <p>При взаимодействии с ботом могут обрабатываться следующие данные:</p>
+          <ul>
+            <li>ваш Telegram ID;</li>
+            <li>имя пользователя (username), если указано;</li>
+            <li>сообщения, которые вы отправляете боту;</li>
+            <li>технические данные, необходимые для корректной работы сервиса.</li>
+          </ul>
+          <p>Бот не запрашивает и не собирает специальные категории персональных данных, кроме информации, которую вы добровольно отправляете в сообщениях.</p>
+
+          <h3>3. Цели обработки данных</h3>
+          <p>Данные используются для следующих целей:</p>
+          <ul>
+            <li>формирование ответов с помощью технологий ИИ;</li>
+            <li>обеспечение корректной работы и улучшения бота;</li>
+            <li>предотвращение злоупотреблений и обеспечение безопасности.</li>
+          </ul>
+          <p>Полученные данные не продаются и не передаются третьим лицам в коммерческих целях.</p>
+
+          <h3>4. Сторонние сервисы</h3>
+          <p>Для генерации ответов сообщения пользователей могут временно обрабатываться через сторонние AI-сервисы (например, провайдеры языковых моделей). Передача данных осуществляется исключительно для формирования ответа.</p>
+
+          <h3>5. Хранение данных</h3>
+          <p>Сообщения могут временно сохраняться по техническим причинам, таким как кэширование, отладка или улучшение сервиса. Постоянный архив личной переписки намеренно не ведётся, за исключением случаев, когда это необходимо для безопасности, предотвращения злоупотреблений или диагностики.</p>
+
+          <h3>6. Безопасность</h3>
+          <p>Администратор бота принимает разумные меры для защиты данных от несанкционированного доступа, изменения или раскрытия.</p>
+
+          <h3>7. Права пользователя</h3>
+          <p>Вы можете прекратить использование бота в любой момент, покинув чат или заблокировав бота. По вопросам обработки данных или запросам на удаление информации вы можете обратиться к администратору бота в Telegram.</p>
+
+          <h3>8. Изменения политики</h3>
+          <p>Настоящая Политика конфиденциальности может периодически обновляться. Продолжение использования бота после внесения изменений означает ваше согласие с обновлённой версией Политики.</p>
+        </div>
+
+        <!-- Kazakh -->
+        <div id="lang-kk" class="lang-block">
+          <div class="date">Күшіне ену күні: 2026-03-01</div>
+
+          <h2>SynGem Bot құпиялылық саясаты</h2>
+
+          <h3>1. Жалпы ережелер</h3>
+          <p>SynGem Bot – жауаптарды генерациялау үшін жасанды интеллект технологияларын (соның ішінде үлкен тілдік модельдерді) қолданатын Telegram-бот. Ботты пайдалану арқылы сіз осы Құпиялылық саясатының шарттарымен келісесіз.</p>
+
+          <h3>2. Өңделетін деректер</h3>
+          <p>Ботпен әрекеттесу кезінде келесі деректер өңделуі мүмкін:</p>
+          <ul>
+            <li>сіздің Telegram ID;</li>
+            <li>пайдаланушы аты (username), егер көрсетілген болса;</li>
+            <li>ботқа жіберген хабарламалар;</li>
+            <li>сервистің дұрыс жұмыс істеуі үшін қажет техникалық деректер.</li>
+          </ul>
+          <p>Арнайы санаттағы жеке деректер әдейі жиналмайды, тек сіз өз еркіңізбен хабарламаларда жазған ақпарат өңделуі мүмкін.</p>
+
+          <h3>3. Деректерді өңдеудің мақсаты</h3>
+          <p>Деректер мыналар үшін қолданылады:</p>
+          <ul>
+            <li>ИИ көмегімен жауаптарды қалыптастыру;</li>
+            <li>боттың дұрыс жұмысын қамтамасыз ету және жетілдіру;</li>
+            <li>бұзушылықтардың алдын алу және қауіпсіздікті қамтамасыз ету.</li>
+          </ul>
+          <p>Деректер коммерциялық мақсатта үшінші тұлғаларға сатылмайды және берілмейді.</p>
+
+          <h3>4. Үшінші тарап сервистері</h3>
+          <p>Жауаптарды қалыптастыру үшін хабарламалар уақытша үшінші тараптың AI-сервистері арқылы өңделуі мүмкін. Деректер тек жауап генерациялау мақсатында беріледі.</p>
+
+          <h3>5. Деректерді сақтау</h3>
+          <p>Хабарламалар техникалық себептерге байланысты (мысалы, кэштеу, ақауларды жою немесе сервисті жақсарту үшін) уақытша сақталуы мүмкін. Жеке хат алмасудың тұрақты мұрағаты әдейі жүргізілмейді, қауіпсіздік, бұзушылықтардың алдын алу немесе диагностика қажет болған жағдайлардан басқа.</p>
+
+          <h3>6. Қауіпсіздік</h3>
+          <p>Бот әкімшісі деректерді заңсыз қол жеткізуден, өзгертуден немесе жариялаудан қорғау үшін ақылға қонымды шаралар қолданады.</p>
+
+          <h3>7. Пайдаланушы құқықтары</h3>
+          <p>Пайдаланушы ботты кез келген уақытта пайдалануды тоқтата алады, ол үшін чаттан шығып кету немесе ботты бұғаттау жеткілікті. Деректерді өңдеу немесе оларды жою туралы сұрақтар бойынша Telegram арқылы бот әкімшісіне хабарласуға болады.</p>
+
+          <h3>8. Саясаттағы өзгерістер</h3>
+          <p>Осы Құпиялылық саясаты уақыт өте келе жаңартылуы мүмкін. Өзгерістер енгізілгеннен кейін ботты пайдалана беру арқылы сіз Құпиялылық саясатының жаңартылған нұсқасымен келісетініңізді білдіресіз.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.lang-btn');
+    const blocks = document.querySelectorAll('.lang-block');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        blocks.forEach(block => {
+          block.classList.remove('active');
+          if (block.id === 'lang-' + lang) {
+            block.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+  </html>
